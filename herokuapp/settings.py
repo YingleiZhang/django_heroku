@@ -25,7 +25,7 @@ SECRET_KEY = 'ctps-*#x0r2fv=h%4(104&bv1*e&dq3sr#4&p4bi(rc-hxwwuw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -75,13 +75,16 @@ WSGI_APPLICATION = 'herokuapp.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 import dj_database_url
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+DATABASES['default'] = dj_database_url.config()
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'herokuapp',
     }
 }
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+ALLOWED_HOSTS = ['*']
 
 """
 DATABASES = {
