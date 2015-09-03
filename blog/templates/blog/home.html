@@ -10,7 +10,8 @@
 		<p class="meta">
 			{{ object.created }}| Tagged under {{ object.tags.all|join:", "}}
 		</p>
-			{{ object.body|markdown }}
+			{{ object.body|truncatewords:"40"|markdown }}
+			<a href="{% url "blog:post_detail" slug=object.slug%}">Read More</a>
 		</div>
 	{% endfor %}
 {% endblock %}
