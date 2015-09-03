@@ -8,7 +8,7 @@
 		<div class = "post" >
 			<h4><a href="{% url "blog:post_detail" slug=object.slug %}">{{ object.title }}</a></h4>
 		<p class="meta">
-			{{ object.created }}|Tagged under {{ object.tags.all|join:", "}}
+			{{ object.created }}| Tagged under {{ object.tags.all|join:", "}}
 		</p>
 			{{ object.body|markdown }}
 		</div>
