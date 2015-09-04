@@ -99,7 +99,6 @@ AUTHENTICATION_BACKENDS = (
 	'django.contrib.auth.backends.ModelBackend',
 )
 
-LOGIN_REDIRECT_URL = '/'
 
 SOCIAL_AUTH_FACEBOOK_KEY = '4191114911618911'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'efe9af92da0c8155ea884e341034d3fe'
@@ -107,6 +106,7 @@ SOCIAL_AUTH_FACEBOOK_SECRET = 'efe9af92da0c8155ea884e341034d3fe'
 SOCIAL_AUTH_TWITTER_KEY = '6WWyZEQjAFuisTrEdCnROf47m'
 SOCIAL_AUTH_TWITTER_SECRET = 'Q0IRXnbSHGfPj9GP0WCZI9mmktKNjjIAfFtdAt3mGQPwhBbmRd'
 
+LOGIN_REDIRECT_URL = '/'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
