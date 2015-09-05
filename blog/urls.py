@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
 	url(r'^$', views.BlogIndex.as_view(), name="index"),
 	url(r'^userlogin', views.userlogin, name="login"),
+	url(r'^userlogout', views.userlogout, name="logout"),
 	url(r'^feed/$', views.BlogFeed.as_view(), name="feed"),
 	url(r'^post/(?P<slug>\S+)$', views.BlogDetail.as_view(), name="post_detail"),
 ]

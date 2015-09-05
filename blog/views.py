@@ -8,6 +8,10 @@ from . import models
 def userlogin(request):
 	context = RequestContext(request, {'request':request, 'user':request.user})
 	return render_to_response('blog/login.html',context_instance=context)
+def userlogout(request):
+	context = RequestContext(request, {'request':request, 'user':request.user})
+	return render_to_response('blog/home.html',context_instance=context)
+
 """
 class BlogLogin(generic.ListView):
 	model = User
