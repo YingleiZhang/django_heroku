@@ -5,12 +5,9 @@ from django.contrib.auth.models import User
 from . import models
 
 # Create your views here.
-def userlogin(request):
+def userauth(request):
 	context = RequestContext(request, {'request':request, 'user':request.user})
-	return render_to_response('blog/login.html',context_instance=context)
-def userlogout(request):
-	context = RequestContext(request, {'request':request, 'user':request.user})
-	return render_to_response('blog/home.html',context_instance=context)
+	return render_to_response('blog/userauth.html',context_instance=context)
 
 """
 class BlogLogin(generic.ListView):

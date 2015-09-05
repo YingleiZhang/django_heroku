@@ -44,10 +44,10 @@
 			<li class="active"><a href="/">Contact</a></li>
 		  </ul>
 		  <ul class="nav navbar-nav navbar-right">
-			{% if user.is_authenticated %}
-			<li class="active"><a href="{% url 'blog:logout' %}">Logout</a></li>
+			{% if user and user.is_authenticated %}
+			<li class="active"><a href="{% url 'blog:userauth' %}">Logout</a></li>
 			{% else %}
-			<li class="active"><a href="{% url 'blog:login'%}">Login</a></li>
+			<li class="active"><a href="{% url 'blog:userauth'%}">Login</a></li>
 			{% endif %}
 		  </ul>
 		</div><!--/.nav-collapse -->
