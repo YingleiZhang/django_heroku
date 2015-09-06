@@ -37,8 +37,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
-    'django_comments',
     'django_markdown',
     'bootstrap3',
     'social.apps.django_app.default',
@@ -112,7 +110,6 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'ItHkl5SL6NyEUDY6JnYsswDy'
 SOCIAL_AUTH_TWITTER_KEY = '6WWyZEQjAFuisTrEdCnROf47m'
 SOCIAL_AUTH_TWITTER_SECRET = 'Q0IRXnbSHGfPj9GP0WCZl9mmktKNjjIAfFtdAt3mGQPwhBbmRd'
 
-LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 
 # Database
