@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.site',
+    'django.contrib.sites',
     'disqus',
     'django_markdown',
     'bootstrap3',
