@@ -14,7 +14,6 @@
 			{{ object.body|truncatewords:"40"|markdown }}
 			<a href="{% url "blog:post_detail" slug=object.slug%}">Read More</a>
 		</div>
-		<a href="{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.id }}">View Comments</a>
-		                {% disqus_num_replies %}
+		{% disqus_num_replies %}
 	{% endfor %}
 {% endblock %}
