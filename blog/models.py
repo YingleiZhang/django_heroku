@@ -24,7 +24,7 @@ class Post(models.Model):
 	objects = PostQuerySet.as_manager()
 
 	def get_absolute_url(self):
-		return reverse("post_detail", kwargs={"slug": self.slug})
+		return reverse("blog:post_detail", kwargs={"slug": self.slug})
 
 	class Meta:
 		verbose_name = "Blog Post"
